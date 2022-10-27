@@ -56,7 +56,7 @@ class _OnboardingCarouselState extends State<OnboardingCarousel> {
               //Buttons positioned below
               Column(children: [
                 Container(
-                    height: Utils.screenHeight * 1.3,
+                    height: Utils.screenHeight * 1,
                     child: PageView(
                         physics: ClampingScrollPhysics(),
                         controller: _pageController,

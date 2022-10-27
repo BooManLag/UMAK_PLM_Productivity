@@ -41,62 +41,64 @@ class ChoosePlan extends StatelessWidget {
                 decoration: BoxDecorationStyles.fadingGlory,
                 child: Padding(
                   padding: const EdgeInsets.all(3.0),
-                  child: DecoratedBox(
-                      decoration: BoxDecorationStyles.fadingInnerDecor,
-                      child: Padding(
-                          padding: const EdgeInsets.all(20.0),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              AppSpaces.verticalSpace10,
-                              Text('Choose Plan', style: AppTextStyles.header2),
-                              AppSpaces.verticalSpace10,
-                              Text('Unlock all features with Premium Plan',
-                                  style: GoogleFonts.lato(fontSize: 14, color: HexColor.fromHex("666A7A"))),
-                              AppSpaces.verticalSpace20,
-                              Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                                PlanCard(
-                                  notifierValue: _planContainerTrigger,
-                                  selectedIndex: 0,
-                                  header: "It's Free",
-                                  subHeader: "For team\nfrom 1 - 5",
-                                ),
-                                AppSpaces.horizontalSpace20,
-                                PlanCard(
+                  child: SingleChildScrollView(
+                    child: DecoratedBox(
+                        decoration: BoxDecorationStyles.fadingInnerDecor,
+                        child: Padding(
+                            padding: const EdgeInsets.all(20.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                AppSpaces.verticalSpace10,
+                                Text('Choose Plan', style: AppTextStyles.header2),
+                                AppSpaces.verticalSpace10,
+                                Text('Unlock all features with Premium Plan',
+                                    style: GoogleFonts.lato(fontSize: 14, color: HexColor.fromHex("666A7A"))),
+                                AppSpaces.verticalSpace20,
+                                Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+                                  PlanCard(
                                     notifierValue: _planContainerTrigger,
-                                    selectedIndex: 1,
-                                    header: "Premium",
-                                    subHeader: "\$19/mo")
-                              ]),
-                              AppSpaces.verticalSpace20,
-                              Text('Enable Features', style: AppTextStyles.header2),
-                              AppSpaces.verticalSpace10,
-                              Container(
-                                width: Utils.screenWidth * 0.8,
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    RichText(
-                                      text: TextSpan(
-                                          text:
-                                              'You can customize the features in your workspace now. Or you can do it later in ',
-                                          style: GoogleFonts.lato(fontSize: 14, color: HexColor.fromHex("666A7A")),
-                                          children: <TextSpan>[
-                                            TextSpan(text: 'Menu - Workspace', style: TextStyle(color: Colors.white))
-                                          ]),
-                                    ),
-                                  ],
+                                    selectedIndex: 0,
+                                    header: "It's Free",
+                                    subHeader: "Accountability\n partners\n from 1 - 3",
+                                  ),
+                                  AppSpaces.horizontalSpace20,
+                                  PlanCard(
+                                      notifierValue: _planContainerTrigger,
+                                      selectedIndex: 1,
+                                      header: "Premium",
+                                      subHeader: "250 Pesos/mo")
+                                ]),
+                                AppSpaces.verticalSpace20,
+                                Text('Enable Features', style: AppTextStyles.header2),
+                                AppSpaces.verticalSpace10,
+                                Container(
+                                  width: Utils.screenWidth * 0.8,
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      RichText(
+                                        text: TextSpan(
+                                            text:
+                                                'You can customize the features in your workspace now. Or you can do it later in ',
+                                            style: GoogleFonts.lato(fontSize: 14, color: HexColor.fromHex("666A7A")),
+                                            children: <TextSpan>[
+                                              TextSpan(text: 'Menu - Workspace', style: TextStyle(color: Colors.white))
+                                            ]),
+                                      ),
+                                    ],
+                                  ),
                                 ),
-                              ),
-                              AppSpaces.verticalSpace20,
-                              ToggleLabelOption(
-                                  label: '    Multiple Assignees',
-                                  notifierValue: _multiUserTrigger,
-                                  icon: Icons.groups),
-                              ToggleLabelOption(
-                                  label: '    Custom Labels', notifierValue: _customLabelTrigger, icon: Icons.category)
-                            ],
-                          ))),
+                                AppSpaces.verticalSpace20,
+                                ToggleLabelOption(
+                                    label: '    Multiple Assignees',
+                                    notifierValue: _multiUserTrigger,
+                                    icon: Icons.groups),
+                                ToggleLabelOption(
+                                    label: '    Custom Labels', notifierValue: _customLabelTrigger, icon: Icons.category)
+                              ],
+                            ))),
+                  ),
                 )))
       ]),
       Positioned(

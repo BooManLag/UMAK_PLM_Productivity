@@ -32,37 +32,39 @@ class _EmailAddressScreenState extends State<EmailAddressScreen> {
           child: Transform.rotate(angle: -math.pi / 2, child: CustomPaint(painter: BackgroundHexagon()))),
       Padding(
         padding: EdgeInsets.all(20.0),
-        child: SafeArea(
-            child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          NavigationBack(),
-          SizedBox(height: 40),
-          Text("What's your\nemail\naddress?",
-              style: GoogleFonts.lato(color: Colors.white, fontSize: 40, fontWeight: FontWeight.bold)),
-          AppSpaces.verticalSpace20,
-          LabelledFormInput(
-              placeholder: "Email",
-              keyboardType: "text",
-              controller: _emailController,
-              obscureText: obscureText,
-              label: "Your Email"),
-          SizedBox(height: 40),
-          Container(
-            //width: 180,
-            height: 60,
-            child: ElevatedButton(
-                onPressed: () {
-                  Get.to(() => SignUp(email: _emailController.text));
-                },
-                style: ButtonStyles.blueRounded,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Icon(Icons.email, color: Colors.white),
-                    Text('   Continue with Email', style: GoogleFonts.lato(fontSize: 20, color: Colors.white)),
-                  ],
-                )),
-          )
-        ])),
+        child: SingleChildScrollView(
+          child: SafeArea(
+              child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            NavigationBack(),
+            SizedBox(height: 40),
+            Text("What's your\nemail\naddress?",
+                style: GoogleFonts.lato(color: Colors.white, fontSize: 40, fontWeight: FontWeight.bold)),
+            AppSpaces.verticalSpace20,
+            LabelledFormInput(
+                placeholder: "Email",
+                keyboardType: "text",
+                controller: _emailController,
+                obscureText: obscureText,
+                label: "Your Email"),
+            SizedBox(height: 40),
+            Container(
+              //width: 180,
+              height: 60,
+              child: ElevatedButton(
+                  onPressed: () {
+                    Get.to(() => SignUp(email: _emailController.text));
+                  },
+                  style: ButtonStyles.blueRounded,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.email, color: Colors.white),
+                      Text('   Continue with Email', style: GoogleFonts.lato(fontSize: 20, color: Colors.white)),
+                    ],
+                  )),
+            )
+          ])),
+        ),
       )
     ]));
   }

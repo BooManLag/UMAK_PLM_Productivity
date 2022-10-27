@@ -28,14 +28,14 @@ class OnboardingStart extends StatelessWidget {
         //images
         Positioned(
             top: Utils.screenHeight * 0.7,
-            right: 100,
+            right: 85,
             child: BackgroundImage(
                 scale: 1.0,
                 image: "assets/man-head.png",
                 gradient: [HexColor.fromHex("92ECEC"), HexColor.fromHex("92ECEC")])),
 
         Positioned(
-            top: Utils.screenHeight * 0.50,
+            top: Utils.screenHeight * 0.20,
             left: Utils.screenWidth * 0.12,
             child: BackgroundImage(
                 scale: 0.5,
@@ -64,12 +64,12 @@ class OnboardingStart extends StatelessWidget {
             child: LoadingSticker(
                 gradients: [HexColor.fromHex("#F3EEAE"), HexColor.fromHex("F3EFAB"), HexColor.fromHex("#4A88FE")])),
         Positioned(
-            top: Utils.screenHeight * 0.50,
+            top: Utils.screenHeight * 0.45,
             left: Utils.screenWidth * 0.22,
             child: LoadingSticker(gradients: [HexColor.fromHex("#a7b2fd"), HexColor.fromHex("#c1a0fd")])),
         Positioned(
             top: Utils.screenHeight * 0.7,
-            left: Utils.screenWidth * 0.6,
+            left: Utils.screenWidth * 0.7,
             child: LoadingSticker(gradients: [HexColor.fromHex("#a7b2fd"), HexColor.fromHex("#c1a0fd")])),
         Positioned(
             top: Utils.screenHeight * 1.3,
@@ -104,18 +104,8 @@ class OnboardingStart extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    RichText(
-                      text: TextSpan(
-                        text: 'Task Management ',
-                        style: GoogleFonts.lato(fontSize: 18, color: HexColor.fromHex("FDA5FF")),
-                        children: <TextSpan>[
-                          TextSpan(
-                            text: '🙌',
-                          ),
-                        ],
-                      ),
-                    ),
-                    Text('Lets create\na space\nfor your workflows.',
+
+                    Text('Achieve\nyour \ngoals\nthe right\n way.',
                         style: GoogleFonts.lato(color: Colors.white, fontSize: 35, fontWeight: FontWeight.bold)),
                     AppSpaces.verticalSpace20,
                     Container(

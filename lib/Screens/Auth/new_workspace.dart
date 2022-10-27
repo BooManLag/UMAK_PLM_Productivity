@@ -37,61 +37,63 @@ class NewWorkSpace extends StatelessWidget {
                   decoration: BoxDecorationStyles.fadingGlory,
                   child: Padding(
                     padding: EdgeInsets.all(3.0),
-                    child: DecoratedBox(
-                        decoration: BoxDecorationStyles.fadingInnerDecor,
-                        child: Padding(
-                          padding: const EdgeInsets.all(20.0),
-                          child: Column(children: [
-                            ProfileDummy(
-                                color: HexColor.fromHex("9F69F9"),
-                                dummyType: ProfileDummyType.Image,
-                                scale: 2.5,
-                                image: "assets/plant.png"),
-                            AppSpaces.verticalSpace10,
-                            Text('Stuart\'s Workspace', style: GoogleFonts.lato(fontSize: 30, color: Colors.white)),
-                            AppSpaces.verticalSpace10,
-                            Text('Tap the logo to upload a new image.',
-                                style: GoogleFonts.lato(fontSize: 14, color: HexColor.fromHex("666A7A"))),
-                            SizedBox(height: 50),
-                            ContainerLabel(label: 'HOW MANY PEOPLE IN YOUR TEAM'),
-                            Padding(
-                              padding: const EdgeInsets.all(15.0),
-                              child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                                Text('11 - 25', style: GoogleFonts.lato(color: Colors.white, fontSize: 20)),
-                                RotatedBox(
-                                  quarterTurns: 1,
-                                  child: Icon(Icons.share, color: Colors.white, size: 30),
-                                )
-                              ]),
-                            ),
-                            AppSpaces.verticalSpace20,
-                            ContainerLabel(label: 'INVITE PEOPLE TO YOUR WORKSPACE'),
-                            Padding(
-                              padding: const EdgeInsets.all(15.0),
-                              child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                                Text('Email Address', style: GoogleFonts.lato(color: Colors.blue, fontSize: 17)),
-                                Icon(Icons.add, color: Colors.white, size: 30)
-                              ]),
-                            ),
-                            AppSpaces.verticalSpace20,
-                            ContainerLabel(label: 'CHOOSE COLOR THEME'),
-                            Container(
-                              child: Padding(
-                                  padding: EdgeInsets.only(top: 15.0),
-                                  child: Wrap(alignment: WrapAlignment.start, children: [
-                                    ...List.generate(
-                                      AppColors.ballColors.length,
-                                      (index) => GradientColorBall(
-                                        valueChanger: _colorTrigger,
-                                        selectIndex: index,
-                                        gradientList: [...AppColors.ballColors[index]],
-                                      ),
-                                    )
-                                  ])),
-                            ),
-                            AppSpaces.verticalSpace20,
-                          ]),
-                        )),
+                    child: SingleChildScrollView(
+                      child: DecoratedBox(
+                          decoration: BoxDecorationStyles.fadingInnerDecor,
+                          child: Padding(
+                            padding: const EdgeInsets.all(20.0),
+                            child: Column(children: [
+                              ProfileDummy(
+                                  color: HexColor.fromHex("9F69F9"),
+                                  dummyType: ProfileDummyType.Image,
+                                  scale: 2.5,
+                                  image: "assets/plant.png"),
+                              AppSpaces.verticalSpace10,
+                              Text('Your Workspace', style: GoogleFonts.lato(fontSize: 30, color: Colors.white)),
+                              AppSpaces.verticalSpace10,
+                              Text('Tap the logo to upload a new image.',
+                                  style: GoogleFonts.lato(fontSize: 14, color: HexColor.fromHex("666A7A"))),
+                              SizedBox(height: 50),
+                              ContainerLabel(label: 'HOW MANY PEOPLE IN YOUR TEAM'),
+                              Padding(
+                                padding: const EdgeInsets.all(15.0),
+                                child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+                                  Text('11 - 25', style: GoogleFonts.lato(color: Colors.white, fontSize: 20)),
+                                  RotatedBox(
+                                    quarterTurns: 1,
+                                    child: Icon(Icons.share, color: Colors.white, size: 30),
+                                  )
+                                ]),
+                              ),
+                              AppSpaces.verticalSpace20,
+                              ContainerLabel(label: 'INVITE PEOPLE TO YOUR WORKSPACE'),
+                              Padding(
+                                padding: const EdgeInsets.all(15.0),
+                                child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+                                  Text('Email Address', style: GoogleFonts.lato(color: Colors.blue, fontSize: 17)),
+                                  Icon(Icons.add, color: Colors.white, size: 30)
+                                ]),
+                              ),
+                              AppSpaces.verticalSpace20,
+                              ContainerLabel(label: 'CHOOSE COLOR THEME'),
+                              Container(
+                                child: Padding(
+                                    padding: EdgeInsets.only(top: 15.0),
+                                    child: Wrap(alignment: WrapAlignment.start, children: [
+                                      ...List.generate(
+                                        AppColors.ballColors.length,
+                                        (index) => GradientColorBall(
+                                          valueChanger: _colorTrigger,
+                                          selectIndex: index,
+                                          gradientList: [...AppColors.ballColors[index]],
+                                        ),
+                                      )
+                                    ])),
+                              ),
+                              AppSpaces.verticalSpace20,
+                            ]),
+                          )),
+                    ),
                   ))),
         ]),
         Positioned(

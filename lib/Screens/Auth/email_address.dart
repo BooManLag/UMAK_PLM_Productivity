@@ -21,51 +21,58 @@ class _EmailAddressScreenState extends State<EmailAddressScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: HexColor.fromHex("#D1D5FA"),
         body: Stack(children: [
-      DarkRadialBackground(
-        color: HexColor.fromHex("#181a1f"),
-        position: "topLeft",
-      ),
-      Positioned(
-          top: Utils.screenHeight / 2,
-          left: Utils.screenWidth,
-          child: Transform.rotate(angle: -math.pi / 2, child: CustomPaint(painter: BackgroundHexagon()))),
-      Padding(
-        padding: EdgeInsets.all(20.0),
-        child: SingleChildScrollView(
-          child: SafeArea(
-              child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            NavigationBack(),
-            SizedBox(height: 40),
-            Text("What's your\nemail\naddress?",
-                style: GoogleFonts.lato(color: Colors.white, fontSize: 40, fontWeight: FontWeight.bold)),
-            AppSpaces.verticalSpace20,
-            LabelledFormInput(
-                placeholder: "Email",
-                keyboardType: "text",
-                controller: _emailController,
-                obscureText: obscureText,
-                label: "Your Email"),
-            SizedBox(height: 40),
-            Container(
-              //width: 180,
-              height: 60,
-              child: ElevatedButton(
-                  onPressed: () {
-                    Get.to(() => SignUp(email: _emailController.text));
-                  },
-                  style: ButtonStyles.blueRounded,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(Icons.email, color: Colors.white),
-                      Text('   Continue with Email', style: GoogleFonts.lato(fontSize: 20, color: Colors.white)),
-                    ],
-                  )),
-            )
-          ])),
-        ),
-      )
-    ]));
+          Padding(
+            padding: EdgeInsets.all(20.0),
+            child: SingleChildScrollView(
+              child: SafeArea(
+                  child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                    SizedBox(height: 40),
+                    Text("What's your\nemail\naddress?",
+                        style: GoogleFonts.lato(
+                            color: HexColor.fromHex("#5C6898"),
+                            fontSize: 40,
+                            fontWeight: FontWeight.bold)),
+                    AppSpaces.verticalSpace20,
+                    LabelledFormInput(
+                        placeholder: "Email",
+                        keyboardType: "text",
+                        controller: _emailController,
+                        obscureText: obscureText,
+                        label: "Your Email"),
+                    SizedBox(height: 40),
+                    Container(
+                      //width: 180,
+                      height: 60,
+                      child: ElevatedButton(
+                          onPressed: () {
+                            Get.to(() => SignUp(email: _emailController.text));
+                          },
+                          style: ButtonStyle(
+                              backgroundColor: MaterialStateProperty.all(
+                                  HexColor.fromHex("5C6898")),
+                              shape: MaterialStateProperty.all<
+                                      RoundedRectangleBorder>(
+                                  RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(30.0),
+                                      side: BorderSide(
+                                          color: HexColor.fromHex("5C6898"))))),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(Icons.email, color: Colors.white),
+                              Text('   Continue with Email',
+                                  style: GoogleFonts.lato(
+                                      fontSize: 20, color: Colors.white)),
+                            ],
+                          )),
+                    )
+                  ])),
+            ),
+          )
+        ]));
   }
 }

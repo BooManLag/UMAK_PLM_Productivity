@@ -17,20 +17,11 @@ class SliderCaptionedImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(children: [
-      Positioned(
-          top: 0,
+      Center(
           child: Image(
               image: AssetImage(this.imageUrl),
               fit: BoxFit.contain,
               height: 450)),
-      Positioned(
-          bottom: 20,
-          left: 20,
-          child: Text(caption,
-              style: GoogleFonts.raleway(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 50,
-                  color: Colors.white))),
       index == 0
           ? Positioned(
               bottom: 70,

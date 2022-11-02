@@ -34,7 +34,8 @@ class _OnboardingCarouselState extends State<OnboardingCarousel> {
       width: 8.0,
       decoration: BoxDecoration(
         shape: BoxShape.circle,
-        color: isActive ? HexColor.fromHex("266FFE") : HexColor.fromHex("666A7A"),
+        color:
+            isActive ? HexColor.fromHex("266FFE") : HexColor.fromHex("666A7A"),
       ),
     );
   }
@@ -42,21 +43,15 @@ class _OnboardingCarouselState extends State<OnboardingCarousel> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: HexColor.fromHex("#D1D5FA"),
         body: AnnotatedRegion<SystemUiOverlayStyle>(
             value: SystemUiOverlayStyle.light,
             child: Stack(children: [
-              Container(
-                // height: double.infinity,
-                // width: double.infinity,
-                child: DarkRadialBackground(
-                  color: HexColor.fromHex("#181a1f"),
-                  position: "bottomRight",
-                ),
-              ),
               //Buttons positioned below
               Column(children: [
+                SizedBox(height: 20,),
                 Container(
-                    height: Utils.screenHeight * 1,
+                    height: Utils.screenHeight * 1.1,
                     child: PageView(
                         physics: ClampingScrollPhysics(),
                         controller: _pageController,
@@ -67,57 +62,58 @@ class _OnboardingCarouselState extends State<OnboardingCarousel> {
                         },
                         children: <Widget>[
                           SliderCaptionedImage(
-                              index: 0, imageUrl: "assets/slider-background-1.png", caption: "Task,\nCalendar,\nChat"),
+                              index: 0,
+                              imageUrl: "assets/car1pic.png",
+                              caption: "Task,\nCalendar,\nChat"),
                           SliderCaptionedImage(
-                              index: 1, imageUrl: "assets/slider-background-3.png", caption: "Work\nAnywhere\nEasily"),
+                              index: 1,
+                              imageUrl: "assets/car2pic.png",
+                              caption: "Work\nAnywhere\nEasily"),
                           SliderCaptionedImage(
                               index: 2,
-                              imageUrl: "assets/slider-background-2.png",
+                              imageUrl: "assets/car3pic.png",
                               caption: "Manage\nEverything\nOn Phone")
                         ])),
                 Padding(
-                  padding: EdgeInsets.only(left: 20.0, right: 20.0, bottom: 20.0),
+                  padding:
+                      EdgeInsets.only(left: 20.0, right: 20.0, bottom: 20.0),
                   child: SingleChildScrollView(
                     child: Container(
                       child: Column(children: [
+                        SizedBox(height: 10,),
                         Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: _buildPageIndicator(),
                         ),
-                        SizedBox(height: 50),
+                        SizedBox(height: 90),
                         Container(
-                          width: double.infinity,
-                          height: 60,
+                          width: 250,
+                          height: 50,
                           child: ElevatedButton(
                               onPressed: () {
                                 Get.to(() => EmailAddressScreen());
                               },
                               style: ButtonStyle(
-                                  backgroundColor: MaterialStateProperty.all(HexColor.fromHex("246CFE")),
-                                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(50.0),
-                                      side: BorderSide(color: HexColor.fromHex("246CFE"))))),
+                                  backgroundColor: MaterialStateProperty.all(
+                                      HexColor.fromHex("5C6898")),
+                                  shape: MaterialStateProperty.all<
+                                          RoundedRectangleBorder>(
+                                      RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(30.0),
+                                          side: BorderSide(
+                                              color: HexColor.fromHex(
+                                                  "5C6898"))))),
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Icon(Icons.email, color: Colors.white),
-                                  Text('   Continue with Email',
-                                      style: GoogleFonts.lato(fontSize: 20, color: Colors.white)),
+                                  Text('   Get Started',
+                                      style: GoogleFonts.lato(
+                                          fontSize: 20, color: Colors.white)),
                                 ],
                               )),
                         ),
-                        SizedBox(height: 10.0),
-                        Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                          Expanded(child: OutlinedButtonWithImage(imageUrl: "assets/google_icon.png")),
-                          SizedBox(width: 20),
-                          Expanded(child: OutlinedButtonWithImage(imageUrl: "assets/facebook_icon.png"))
-                        ]),
-                        Padding(
-                          padding: const EdgeInsets.all(10.0),
-                          child: Text('By continuing you agree Taskez\'s Terms of Services & Privacy Policy.',
-                              textAlign: TextAlign.center,
-                              style: GoogleFonts.lato(fontSize: 15, color: HexColor.fromHex("666A7A"))),
-                        )
+
                       ]),
                     ),
                   ),

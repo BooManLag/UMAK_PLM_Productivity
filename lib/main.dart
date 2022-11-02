@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
-import 'Screens/splash_screen.dart';
+import 'Screens/Onboarding/onboarding_start.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
           systemOverlayStyle: SystemUiOverlayStyle.light,
         ),
       ),
-      home: SplashScreen(),
+      home: OnboardingStart(),
     );
   }
 }

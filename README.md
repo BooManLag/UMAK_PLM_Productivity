@@ -1,6 +1,6 @@
-# productivity_app
+# Productivity App 
 
-A new Flutter project.
+An application developed for 11th IT Skills Competition under the Android Development - Productivity
 
 ## Getting Started
 

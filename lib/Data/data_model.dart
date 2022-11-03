@@ -4,31 +4,31 @@ import 'package:productivity_app/Values/values.dart';
 class AppData {
   static final List<Map<String, dynamic>> progressIndicatorList = [
     {
-      "cardTitle": "Progress Task Progress",
+      "cardTitle": "Monday",
       "rating": "3/5",
       "progress": "68.99",
       "progressBar": "2"
     },
     {
-      "cardTitle": "Registration",
+      "cardTitle": "Tuesday",
       "rating": "3/4",
       "progress": "75.00",
       "progressBar": "3"
     },
     {
-      "cardTitle": "Invite 5 Members",
+      "cardTitle": "Wednesday",
       "rating": "2/5",
       "progress": "50",
       "progressBar": "1"
     },
     {
-      "cardTitle": "Setup Profile",
+      "cardTitle": "Thursday",
       "rating": "3/4",
       "progress": "75",
       "progressBar": "3"
     },
     {
-      "cardTitle": "Complete Workspace",
+      "cardTitle": "Friday",
       "rating": "3/5",
       "progress": "68.99",
       "progressBar": "2"
@@ -37,8 +37,8 @@ class AppData {
 
   static final List<Map<String, dynamic>> notificationMentions = [
     {
-      "mentionedBy": "Benjamin Poole",
-      "mentionedIn": "Unity Gaming",
+      "mentionedBy": "Joshua Bumanlag",
+      "mentionedIn": "Application Design",
       "read": false,
       "date": "Nov 2nd",
       "profileImage": "assets/memoji/1.png",
@@ -50,7 +50,7 @@ class AppData {
           " when you have time please take a look at the new designs I just made in Figma. 👋"
     },
     {
-      "mentionedBy": "Katharine Walls",
+      "mentionedBy": "Sean Bayyono",
       "mentionedIn": "Unity Gaming",
       "read": true,
       "date": "Nov 2nd",
@@ -143,27 +143,27 @@ class AppData {
 
   static final List<Map<String, dynamic>> onlineUsers = [
     {
-      "name": "Gareth Reid 🔥",
+      "name": "Joshua Bumanlag 🔥",
       "profileImage": "assets/memoji/1.png",
       "color": "BAF0C5",
     },
     {
-      "name": "Vincent Lyons 🇺🇸",
+      "name": "Lambert Dela Cruz 🇺🇸",
       "profileImage": "assets/memoji/2.png",
       "color": "DACFFE",
     },
     {
-      "name": "Adeline Nunez 🎉",
+      "name": "Sean Bayono 🎉",
       "profileImage": "assets/memoji/4.png",
       "color": "FFC7D5",
     },
     {
-      "name": "Samuel Doyle 🔥",
+      "name": "Adrian Abelarde 🔥",
       "profileImage": "assets/memoji/7.png",
       "color": "C0E7FD",
     },
     {
-      "name": "Ruth Benson 🔥",
+      "name": "LA Toribio 🔥",
       "profileImage": "assets/memoji/9.png",
       "color": "D7D2D4",
     },
@@ -216,18 +216,18 @@ class AppData {
 
   static final List<Map<String, dynamic>> employeeData = [
     {
-      "employeeName": "Aaliyah Langosh",
+      "employeeName": "Sean Bayono",
       "employeeImage": "assets/girl_smile.png",
       "color": HexColor.fromHex("FCA3FF"),
       "activated": true,
-      "employeePosition": "Senior Interactions Agent"
+      "employeePosition": "Lead UI/UX"
     },
     {
-      "employeeName": "Greta Streich",
+      "employeeName": "Joshua Bumanlag",
       "employeeImage": "assets/man-head.png",
       "color": HexColor.fromHex("94F1F1"),
       "activated": false,
-      "employeePosition": "Dynamic Security Technician"
+      "employeePosition": "Lead Developer"
     },
     {
       "employeeName": "Judd Koch",
@@ -268,21 +268,21 @@ class AppData {
 
   static final List<Map<String, dynamic>> productData = [
     {
-      "projectName": "Unity Dashboard",
+      "projectName": "Application Design",
       "category": "Design",
       "color": "A06AFA",
       "ratingsUpperNumber": 15,
       "ratingsLowerNumber": 20
     },
     {
-      "projectName": "Instagram   Shots🇺🇸",
+      "projectName": "Pubmats 🇵🇭",
       "category": "Marketing",
       "color": "8D96FF",
       "ratingsUpperNumber": 8,
       "ratingsLowerNumber": 20
     },
     {
-      "projectName": "Cubbies",
+      "projectName": "Productivity App",
       "category": "Design",
       "color": "FF968E",
       "ratingsUpperNumber": 15,
@@ -296,14 +296,14 @@ class AppData {
       "ratingsLowerNumber": 20
     },
     {
-      "projectName": "UI8 Platform",
+      "projectName": "Kubits",
       "category": "Design",
       "color": "A06AFA",
       "ratingsUpperNumber": 10,
       "ratingsLowerNumber": 20
     },
     {
-      "projectName": "3D Characters Inc.",
+      "projectName": "Anytime PitNess",
       "category": "Development",
       "color": "A6F69C",
       "ratingsUpperNumber": 18,

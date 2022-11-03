@@ -45,13 +45,13 @@ class _ProfilePageState extends State<ProfilePage> {
                     image: "assets/man-head.png"),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Text("Blake Gordon",
+                  child: Text("Joshua Bumanlag",
                       style: GoogleFonts.lato(
                           color: Colors.white,
                           fontSize: 40,
                           fontWeight: FontWeight.bold)),
                 ),
-                Text("blake@email.com",
+                Text("bumanlag315@gmail.com",
                     style: GoogleFonts.lato(
                         color: HexColor.fromHex("B0FFE1"), fontSize: 17)),
                 Padding(

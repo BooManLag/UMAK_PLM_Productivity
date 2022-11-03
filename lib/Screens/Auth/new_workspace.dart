@@ -5,116 +5,89 @@ import 'package:productivity_app/Values/values.dart';
 import 'package:productivity_app/widgets/Buttons/primary_progress_button.dart';
 import 'package:productivity_app/widgets/DarkBackground/darkRadialBackground.dart';
 import 'package:productivity_app/widgets/Navigation/default_back.dart';
-import 'package:productivity_app/widgets/Onboarding/gradient_color_ball.dart';
-import 'package:productivity_app/widgets/container_label.dart';
-import 'package:productivity_app/widgets/dummy/profile_dummy.dart';
-
+import 'package:productivity_app/widgets/Onboarding/plan_card_habit.dart';
+import 'package:productivity_app/widgets/Onboarding/toggle_option.dart';
+import 'package:flutter/cupertino.dart';
 import 'choose_plan.dart';
 
 class NewWorkSpace extends StatelessWidget {
-  ValueNotifier<int> _colorTrigger = ValueNotifier(5);
+  ValueNotifier<int> _planContainerTrigger = ValueNotifier(0);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(children: [
-        DarkRadialBackground(
-          color: HexColor.fromHex("#181a1f"),
-          position: "topLeft",
-        ),
-        Column(children: [
-          SizedBox(height: 40),
-          Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: DefaultNav(title: "New WorkSpace"),
-          ),
-          AppSpaces.verticalSpace20,
-          Expanded(
-              flex: 1,
-              child: Container(
-                  width: double.infinity,
-                  height: double.infinity,
-                  decoration: BoxDecorationStyles.fadingGlory,
-                  child: Padding(
-                    padding: EdgeInsets.all(3.0),
-                    child: SingleChildScrollView(
-                      child: DecoratedBox(
-                          decoration: BoxDecorationStyles.fadingInnerDecor,
-                          child: Padding(
-                            padding: const EdgeInsets.all(20.0),
-                            child: Column(children: [
-                              ProfileDummy(
-                                  color: HexColor.fromHex("9F69F9"),
-                                  dummyType: ProfileDummyType.Image,
-                                  scale: 2.5,
-                                  image: "assets/plant.png"),
-                              AppSpaces.verticalSpace10,
-                              Text('Your Workspace', style: GoogleFonts.lato(fontSize: 30, color: Colors.white)),
-                              AppSpaces.verticalSpace10,
-                              Text('Tap the logo to upload a new image.',
-                                  style: GoogleFonts.lato(fontSize: 14, color: HexColor.fromHex("666A7A"))),
-                              SizedBox(height: 50),
-                              ContainerLabel(label: 'HOW MANY PEOPLE IN YOUR TEAM'),
-                              Padding(
-                                padding: const EdgeInsets.all(15.0),
-                                child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                                  Text('11 - 25', style: GoogleFonts.lato(color: Colors.white, fontSize: 20)),
-                                  RotatedBox(
-                                    quarterTurns: 1,
-                                    child: Icon(Icons.share, color: Colors.white, size: 30),
-                                  )
-                                ]),
-                              ),
-                              AppSpaces.verticalSpace20,
-                              ContainerLabel(label: 'INVITE PEOPLE TO YOUR WORKSPACE'),
-                              Padding(
-                                padding: const EdgeInsets.all(15.0),
-                                child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                                  Text('Email Address', style: GoogleFonts.lato(color: Colors.blue, fontSize: 17)),
-                                  Icon(Icons.add, color: Colors.white, size: 30)
-                                ]),
-                              ),
-                              AppSpaces.verticalSpace20,
-                              ContainerLabel(label: 'CHOOSE COLOR THEME'),
-                              Container(
-                                child: Padding(
-                                    padding: EdgeInsets.only(top: 15.0),
-                                    child: Wrap(alignment: WrapAlignment.start, children: [
-                                      ...List.generate(
-                                        AppColors.ballColors.length,
-                                        (index) => GradientColorBall(
-                                          valueChanger: _colorTrigger,
-                                          selectIndex: index,
-                                          gradientList: [...AppColors.ballColors[index]],
-                                        ),
-                                      )
-                                    ])),
-                              ),
-                              AppSpaces.verticalSpace20,
-                            ]),
-                          )),
-                    ),
-                  ))),
-        ]),
-        Positioned(
-            bottom: 50,
+        body: Stack(children: [
+
+      DarkRadialBackground(
+        color: HexColor.fromHex("#181a1f"),
+        position: "topLeft",
+      ),
+      Column(children: [
+        SizedBox(height: 100),
+        AppSpaces.verticalSpace20,
+        Expanded(
+            flex: 1,
             child: Container(
-              padding: EdgeInsets.only(left: 40, right: 20),
-              width: Utils.screenWidth,
-              child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                Text('Skip',
-                    style:
-                        GoogleFonts.lato(color: HexColor.fromHex("616575"), fontSize: 16, fontWeight: FontWeight.bold)),
-                PrimaryProgressButton(
+                width: double.infinity,
+                height: double.infinity,
+                decoration: BoxDecorationStyles.fadingGlory,
+                child: Padding(
+                  padding: const EdgeInsets.all(3.0),
+                  child: SingleChildScrollView(
+                    child: DecoratedBox(
+                        decoration: BoxDecorationStyles.fadingInnerDecor,
+                        child: Padding(
+                            padding: const EdgeInsets.all(20.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                AppSpaces.verticalSpace10,
+                                Text('How do you prefer to study?',
+                                    style: AppTextStyles.header2),
+                                AppSpaces.verticalSpace10,
+                                Text('Choose one and start studying',
+                                    style: GoogleFonts.lato(
+                                        fontSize: 14,
+                                        color: HexColor.fromHex("666A7A"))),
+                                AppSpaces.verticalSpace20,
+                                Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      PlanCardHabit(
+                                        notifierValue: _planContainerTrigger,
+                                        selectedIndex: 0,
+                                        header: "By Myself",
+                                        subHeader: "Study by yourself",
+                                      ),
+                                      AppSpaces.horizontalSpace20,
+                                      PlanCardHabit(
+                                          notifierValue: _planContainerTrigger,
+                                          selectedIndex: 1,
+                                          header: "StudyBud",
+                                          subHeader: "Collab with people")
+                                    ]),
+                                AppSpaces.verticalSpace20,
+                                AppSpaces.verticalSpace20,
+                              ],
+                            ))),
+                  ),
+                )))
+      ]),
+      Positioned(
+          bottom: 50,
+          child: Container(
+            padding: EdgeInsets.only(left: 40, right: 20),
+            width: Utils.screenWidth,
+            child: Row(mainAxisAlignment: MainAxisAlignment.end, children: [
+              PrimaryProgressButton(
                   width: 120,
-                  label: "Next",
+                  label: "Done",
                   callback: () {
                     Get.to(() => ChoosePlan());
-                  },
-                )
-              ]),
-            ))
-      ]),
-    );
+                  })
+            ]),
+          ))
+    ]));
   }
 }

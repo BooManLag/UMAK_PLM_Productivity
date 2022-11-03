@@ -43,7 +43,7 @@ class _OnboardingCarouselState extends State<OnboardingCarousel> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: HexColor.fromHex("#D1D5FA"),
+        backgroundColor: HexColor.fromHex("#FFFFFF"),
         body: AnnotatedRegion<SystemUiOverlayStyle>(
             value: SystemUiOverlayStyle.light,
             child: Stack(children: [
@@ -80,12 +80,12 @@ class _OnboardingCarouselState extends State<OnboardingCarousel> {
                   child: SingleChildScrollView(
                     child: Container(
                       child: Column(children: [
-                        SizedBox(height: 10,),
+                        SizedBox(height: 50,),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: _buildPageIndicator(),
                         ),
-                        SizedBox(height: 90),
+                        SizedBox(height: 40),
                         Container(
                           width: 250,
                           height: 50,

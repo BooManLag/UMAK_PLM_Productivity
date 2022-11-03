@@ -24,19 +24,14 @@ class DashboardSettingsBottomSheet extends StatelessWidget {
     return Column(children: [
       AppSpaces.verticalSpace10,
       BottomSheetHolder(),
-      AppSpaces.verticalSpace20,
       ToggleLabelOption(label: '    Total Task', notifierValue: totalTaskNotifier, icon: Icons.check_circle_outline),
       ToggleLabelOption(label: '    Task Due Soon', notifierValue: totalDueNotifier, icon: Icons.batch_prediction),
       ToggleLabelOption(label: '    Completed', notifierValue: totalCompletedNotifier, icon: Icons.check_circle),
       ToggleLabelOption(label: '    Working On', notifierValue: workingOnNotifier, icon: Icons.flag),
       Spacer(),
       Padding(
-        padding: EdgeInsets.only(right: 20.0, left: 20.0, bottom: 20.0),
-        child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-          AppTextButton(
-            buttonText: 'Clear All',
-            buttonSize: 16,
-          ),
+        padding: EdgeInsets.only(right: 20.0, left: 20.0, bottom: 10),
+        child: Row(mainAxisAlignment: MainAxisAlignment.end, children: [
           AppPrimaryButton(
             buttonHeight: 60,
             buttonWidth: 160,

@@ -23,27 +23,23 @@ class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: HexColor.fromHex("#D1D5FA"),
         body: Stack(children: [
-      DarkRadialBackground(
-        color: HexColor.fromHex("#181a1f"),
-        position: "topLeft",
-      ),
       Padding(
           padding: EdgeInsets.all(20.0),
           child: SingleChildScrollView(
             child: SafeArea(
                 child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              NavigationBack(),
               SizedBox(height: 40),
-              Text('Sign Up', style: GoogleFonts.lato(color: Colors.white, fontSize: 40, fontWeight: FontWeight.bold)),
+              Text('Sign Up', style: GoogleFonts.lato(color: HexColor.fromHex("#5C6898"), fontSize: 40, fontWeight: FontWeight.bold)),
               AppSpaces.verticalSpace20,
               RichText(
                 text: TextSpan(
-                  text: 'Using  ',
+                  text: 'Using ',
                   style: GoogleFonts.lato(color: HexColor.fromHex("676979")),
                   children: <TextSpan>[
                     TextSpan(text: widget.email, style: TextStyle(color: Colors.white70, fontWeight: FontWeight.bold)),
-                    TextSpan(text: "  to login.", style: GoogleFonts.lato(color: HexColor.fromHex("676979"))),
+                    TextSpan(text: "to login.", style: GoogleFonts.lato(color: HexColor.fromHex("676979"))),
                   ],
                 ),
               ),
@@ -69,7 +65,15 @@ class _SignUpState extends State<SignUp> {
                     onPressed: () {
                       Get.to(() => Login(email: widget.email));
                     },
-                    style: ButtonStyles.blueRounded,
+                    style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            HexColor.fromHex("5C6898")),
+                        shape: MaterialStateProperty.all<
+                            RoundedRectangleBorder>(
+                            RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(30.0),
+                                side: BorderSide(
+                                    color: HexColor.fromHex("5C6898"))))),
                     child: Text('Sign Up', style: GoogleFonts.lato(fontSize: 20, color: Colors.white))),
               )
             ])),

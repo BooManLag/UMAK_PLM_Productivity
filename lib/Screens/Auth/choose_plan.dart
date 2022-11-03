@@ -28,10 +28,7 @@ class ChoosePlan extends StatelessWidget {
       ),
       Column(children: [
         SizedBox(height: 40),
-        Padding(
-          padding: const EdgeInsets.all(20.0),
-          child: DefaultNav(title: "New WorkSpace"),
-        ),
+
         AppSpaces.verticalSpace20,
         Expanded(
             flex: 1,
@@ -89,27 +86,21 @@ class ChoosePlan extends StatelessWidget {
                                     ],
                                   ),
                                 ),
-                                AppSpaces.verticalSpace20,
                                 ToggleLabelOption(
                                     label: '    Multiple Assignees',
                                     notifierValue: _multiUserTrigger,
                                     icon: Icons.groups),
-                                ToggleLabelOption(
-                                    label: '    Custom Labels', notifierValue: _customLabelTrigger, icon: Icons.category)
                               ],
                             ))),
                   ),
                 )))
       ]),
       Positioned(
-          bottom: 50,
+          bottom: 40,
           child: Container(
             padding: EdgeInsets.only(left: 40, right: 20),
             width: Utils.screenWidth,
-            child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-              Text('Back',
-                  style:
-                      GoogleFonts.lato(color: HexColor.fromHex("616575"), fontSize: 16, fontWeight: FontWeight.bold)),
+            child: Row(mainAxisAlignment: MainAxisAlignment.end, children: [
               PrimaryProgressButton(
                   width: 120,
                   label: "Done",

@@ -97,12 +97,7 @@ class DailyGoalCard extends StatelessWidget {
                           height: 50,
                           decoration: BoxDecoration(shape: BoxShape.circle),
                           child: ClipOval(
-                            child: Image(
-                              fit: BoxFit.contain,
-                              image: AssetImage(
-                                "assets/small-logo.png",
-                              ),
-                            ),
+                            child: Text("😄",style: TextStyle(fontSize: 40),)
                           ),
                         ),
                       )),

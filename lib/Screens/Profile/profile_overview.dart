@@ -40,13 +40,13 @@ class ProfileOverview extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Text("Blake Gordon",
+              child: Text("Joshua Bumanlag",
                   style: GoogleFonts.lato(
                       color: Colors.white,
                       fontSize: 40,
                       fontWeight: FontWeight.bold)),
             ),
-            Text("blake@email.com",
+            Text("bumanlag315@gmail.com",
                 style: GoogleFonts.lato(
                     color: HexColor.fromHex("B0FFE1"), fontSize: 17)),
             Padding(
@@ -84,13 +84,13 @@ class ProfileOverview extends StatelessWidget {
                           Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text("UI8 Design",
+                                Text("Matrix Co.",
                                     style: GoogleFonts.lato(
                                         color: Colors.white,
                                         fontSize: 17,
                                         fontWeight: FontWeight.bold)),
                                 SizedBox(height: 5),
-                                Text("hello@ui8.net",
+                                Text("matrixco@gmail.com",
                                     style: GoogleFonts.lato(
                                         fontWeight: FontWeight.bold,
                                         color: HexColor.fromHex("5E6272")))

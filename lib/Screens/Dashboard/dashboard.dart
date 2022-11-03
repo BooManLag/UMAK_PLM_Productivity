@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 
 import 'package:google_fonts/google_fonts.dart';
 import 'package:productivity_app/BottomSheets/bottom_sheets.dart';
-import 'package:productivity_app/Screens/Chat/chat_screen.dart';
 import 'package:productivity_app/Screens/Profile/profile_overview.dart';
 import 'package:productivity_app/Values/values.dart';
 import 'package:productivity_app/widgets/BottomSheets/dashboard_settings_sheet.dart';
@@ -33,8 +32,6 @@ class Dashboard extends StatelessWidget {
               DashboardNav(
                 icon: FontAwesomeIcons.comment,
                 image: "assets/man-head.png",
-                notificationCount: "2",
-                page: ChatScreen(),
                 title: "Dashboard",
                 onImageTapped: () {
                   Get.to(() => ProfileOverview());

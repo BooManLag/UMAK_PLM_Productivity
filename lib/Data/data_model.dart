@@ -268,7 +268,7 @@ class AppData {
 
   static final List<Map<String, dynamic>> productData = [
     {
-      "projectName": "Application Design",
+      "projectName": "App Design",
       "category": "Design",
       "color": "A06AFA",
       "ratingsUpperNumber": 15,

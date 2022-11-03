@@ -47,7 +47,7 @@ class UnlabelledFormInput extends StatelessWidget {
                         ? FontAwesomeIcons.eye
                         : FontAwesomeIcons.eyeSlash,
                     size: 15.0,
-                    color: HexColor.fromHex("3C3E49"),
+                    color: HexColor.fromHex("000000"),
                   ))
               : InkWell(
                   onTap: () {
@@ -60,13 +60,13 @@ class UnlabelledFormInput extends StatelessWidget {
           hintStyle: GoogleFonts.lato(
               fontWeight: FontWeight.bold,
               fontSize: 18,
-              color: HexColor.fromHex("3C3E49")),
+              color: HexColor.fromHex("000000")),
           filled: false,
           enabledBorder: UnderlineInputBorder(
-            borderSide: BorderSide(color: HexColor.fromHex("3C3E49")),
+            borderSide: BorderSide(color: HexColor.fromHex("000000")),
           ),
           focusedBorder: UnderlineInputBorder(
-            borderSide: BorderSide(color: HexColor.fromHex("BEF0B2")),
+            borderSide: BorderSide(color: HexColor.fromHex("000000")),
           ),
           border: UnderlineInputBorder(
               borderSide: BorderSide(color: Colors.green))),

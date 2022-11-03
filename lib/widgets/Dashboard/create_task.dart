@@ -71,7 +71,7 @@ class CreateTaskBottomSheet extends StatelessWidget {
                   AppSpaces.horizontalSpace10,
                   CircularCardLabel(
                     label: 'Assigned to',
-                    value: 'Dereck Boyle',
+                    value: 'Joshua B',
                     color: Colors.white,
                   )
                 ]),

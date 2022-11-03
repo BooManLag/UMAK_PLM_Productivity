@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:productivity_app/BottomSheets/bottom_sheets.dart';
 import 'package:productivity_app/Screens/Projects/create_project.dart';
-import 'package:productivity_app/Screens/Projects/set_members.dart';
 import 'package:productivity_app/Screens/Task/task_due_date.dart';
 import 'package:productivity_app/Values/values.dart';
 import 'package:productivity_app/widgets/BottomSheets/bottom_sheet_holder.dart';
@@ -29,12 +28,6 @@ class DashboardAddBottomSheet extends StatelessWidget {
           icon: Icons.device_hub,
           callback: () {
             Get.to(() => CreateProjectScreen());
-          }),
-      LabelledOption(
-          label: 'Create team',
-          icon: Icons.people,
-          callback: () {
-            Get.to(() => SelectMembersScreen());
           }),
       LabelledOption(
           label: 'Create Event',

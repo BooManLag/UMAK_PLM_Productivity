@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:productivity_app/Values/values.dart';
-import 'package:productivity_app/widgets/Chat/add_chat_icon.dart';
 import 'package:productivity_app/widgets/DarkBackground/darkRadialBackground.dart';
 import 'package:productivity_app/widgets/Navigation/app_header.dart';
 
@@ -19,10 +18,6 @@ class Projects extends StatelessWidget {
           padding: const EdgeInsets.only(right: 20, left: 20),
           child: SafeArea(
             child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              TaskezAppHeader(
-                title: "Chat",
-                widget: AppAddIcon(),
-              ),
               AppSpaces.verticalSpace20,
             ]),
           ))

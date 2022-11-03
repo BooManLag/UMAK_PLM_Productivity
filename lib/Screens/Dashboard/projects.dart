@@ -3,7 +3,6 @@ import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:productivity_app/Data/data_model.dart';
 import 'package:productivity_app/Values/values.dart';
 import 'package:productivity_app/widgets/Buttons/primary_tab_buttons.dart';
-import 'package:productivity_app/widgets/Chat/add_chat_icon.dart';
 import 'package:productivity_app/widgets/Navigation/app_header.dart';
 import 'package:productivity_app/widgets/Projects/project_card_horizontal.dart';
 import 'package:productivity_app/widgets/Projects/project_card_vertical.dart';
@@ -17,15 +16,6 @@ class ProjectScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-      Padding(
-        padding: const EdgeInsets.only(right: 20, left: 20),
-        child: SafeArea(
-          child: TaskezAppHeader(
-            title: "Projects",
-            widget: AppAddIcon(scale: 1.0),
-          ),
-        ),
-      ),
       AppSpaces.verticalSpace20,
       Padding(
         padding: const EdgeInsets.only(right: 20, left: 20),

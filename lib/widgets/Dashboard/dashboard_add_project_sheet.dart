@@ -5,7 +5,6 @@ import 'package:productivity_app/BottomSheets/bottom_sheets.dart';
 import 'package:productivity_app/Values/values.dart';
 import 'package:productivity_app/widgets/BottomSheets/bottom_sheet_holder.dart';
 import 'package:productivity_app/widgets/Buttons/rect_primary_button.dart';
-import 'package:productivity_app/widgets/Chat/badged_title.dart';
 import 'package:productivity_app/widgets/Forms/form_input_unlabelled.dart';
 
 import '../add_sub_icon.dart';
@@ -77,11 +76,6 @@ class DashboardAddProjectSheet extends StatelessWidget {
                   ])),
               AppSpaces.verticalSpace20,
               Row(children: [
-                BadgedTitle(
-                  title: "Design",
-                  color: 'FCA3FF',
-                  number: '6',
-                ),
                 IconButton(
                   icon: Icon(Icons.edit, size: 20, color: Colors.white),
                   onPressed: () {},
@@ -95,7 +89,7 @@ class DashboardAddProjectSheet extends StatelessWidget {
               Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                 Row(
                   children: [
-                    Text("Public to Design Team  ",
+                    Text("Public to Accounta-Group  ",
                         style: GoogleFonts.lato(color: Colors.white, fontWeight: FontWeight.w700)),
                     Icon(Icons.expand_more, color: Colors.white),
                   ],

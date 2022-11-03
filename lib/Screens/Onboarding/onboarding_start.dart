@@ -21,7 +21,7 @@ class OnboardingStart extends StatelessWidget {
           child: Image.asset("assets/pic1.png"),
         ),
         Positioned(
-          top: Utils.screenHeight * 1.05,
+          top: Utils.screenHeight * 1.25,
           left: Utils.screenWidth * 0.39,
           child: Text(
             "studybud",

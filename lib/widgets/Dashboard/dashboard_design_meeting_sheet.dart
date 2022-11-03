@@ -6,7 +6,7 @@ import 'package:productivity_app/widgets/Dashboard/sheet_goto_calendar.dart';
 import 'package:productivity_app/widgets/Forms/form_input_unlabelled.dart';
 
 import '../add_sub_icon.dart';
-import 'dashboard_meeting_details.dart';
+
 import 'filled_selectable_container.dart';
 import 'in_bottomsheet_subtitle.dart';
 
@@ -24,7 +24,8 @@ class DashboardDesignMeetingSheet extends StatelessWidget {
         AppSpaces.verticalSpace10,
         Padding(
             padding: EdgeInsets.all(20),
-            child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start, children: [
               Row(
                 children: [
                   Container(
@@ -42,7 +43,7 @@ class DashboardDesignMeetingSheet extends StatelessWidget {
                   AppSpaces.horizontalSpace20,
                   Expanded(
                     child: UnlabelledFormInput(
-                      placeholder: "Design Meeting",
+                      placeholder: "Accounta-Group",
                       keyboardType: "text",
                       autofocus: true,
                       controller: _meetingNameController,
@@ -76,19 +77,10 @@ class DashboardDesignMeetingSheet extends StatelessWidget {
                 child: AddSubIcon(
                   scale: 0.8,
                   color: AppColors.primaryAccentColor,
-                  callback: _addMeetingDetails,
                 ),
               ),
             ]))
       ]),
-    );
-  }
-
-  void _addMeetingDetails() {
-    showAppBottomSheet(
-      DashboardMeetingDetails(),
-      isScrollControlled: true,
-      popAndShow: true,
     );
   }
 }

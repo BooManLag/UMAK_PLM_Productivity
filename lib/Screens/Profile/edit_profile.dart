@@ -58,14 +58,14 @@ class EditProfilePage extends StatelessWidget {
             ),
             AppSpaces.verticalSpace20,
             LabelledFormInput(
-                placeholder: "Blake Gordon",
+                placeholder: "Joshua Bumanlag",
                 keyboardType: "text",
                 controller: _nameController,
                 obscureText: false,
                 label: "Your Name"),
             AppSpaces.verticalSpace20,
             LabelledFormInput(
-                placeholder: "blake@gmail.com",
+                placeholder: "bumanlag315@gmail.com",
                 keyboardType: "text",
                 controller: _emailController,
                 obscureText: true,

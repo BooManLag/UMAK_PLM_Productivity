@@ -26,7 +26,7 @@ class PrimaryProgressButton extends StatelessWidget {
           onPressed: callback,
           style: ButtonStyle(
               backgroundColor:
-                  MaterialStateProperty.all<Color>(HexColor.fromHex("246CFE")),
+                  MaterialStateProperty.all<Color>(HexColor.fromHex("#5C6898")),
               shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                   RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(50.0),

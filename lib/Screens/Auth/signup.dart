@@ -38,8 +38,8 @@ class _SignUpState extends State<SignUp> {
                   text: 'Using ',
                   style: GoogleFonts.lato(color: HexColor.fromHex("676979")),
                   children: <TextSpan>[
-                    TextSpan(text: widget.email, style: TextStyle(color: Colors.white70, fontWeight: FontWeight.bold)),
-                    TextSpan(text: "to login.", style: GoogleFonts.lato(color: HexColor.fromHex("676979"))),
+                    TextSpan(text: widget.email, style: TextStyle(color: HexColor.fromHex("#5C6898"), fontWeight: FontWeight.bold)),
+                    TextSpan(text: " to login.", style: GoogleFonts.lato(color: HexColor.fromHex("676979"))),
                   ],
                 ),
               ),

@@ -33,7 +33,7 @@ class DashboardSettingsBottomSheet extends StatelessWidget {
         padding: EdgeInsets.only(right: 20.0, left: 20.0, bottom: 15),
         child: Row(mainAxisAlignment: MainAxisAlignment.end, children: [
           AppPrimaryButton(
-            buttonHeight: 60,
+            buttonHeight: 50,
             buttonWidth: 160,
             buttonText: "Save Changes",
           )

@@ -37,7 +37,7 @@ class LabelledFormInput extends StatelessWidget {
           controller: controller,
 
           style: GoogleFonts.lato(
-              fontWeight: FontWeight.bold, fontSize: 18, color: Colors.white),
+              fontWeight: FontWeight.bold, fontSize: 18, color: Colors.black),
           onTap: () {},
           keyboardType: keyboardType == "text"
               ? TextInputType.text

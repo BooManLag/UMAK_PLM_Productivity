@@ -21,11 +21,8 @@ class EditProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: HexColor.fromHex("#D1D5FA"),
         body: Stack(children: [
-      DarkRadialBackground(
-        color: HexColor.fromHex("#181a1f"),
-        position: "topLeft",
-      ),
       Padding(
           padding: EdgeInsets.only(left: 20, right: 20),
           child: SafeArea(
@@ -52,20 +49,20 @@ class EditProfilePage extends StatelessWidget {
                     width: 120,
                     height: 120,
                     decoration:
-                        BoxDecoration(color: AppColors.primaryAccentColor.withOpacity(0.75), shape: BoxShape.circle),
+                        BoxDecoration(color: HexColor.fromHex("#5C6898").withOpacity(0.75), shape: BoxShape.circle),
                     child: Icon(FeatherIcons.camera, color: Colors.white, size: 20))
               ],
             ),
             AppSpaces.verticalSpace20,
             LabelledFormInput(
-                placeholder: "Blake Gordon",
+                placeholder: "Joshua Bumanlag",
                 keyboardType: "text",
                 controller: _nameController,
                 obscureText: false,
                 label: "Your Name"),
             AppSpaces.verticalSpace20,
             LabelledFormInput(
-                placeholder: "blake@gmail.com",
+                placeholder: "bumanlag315@gmail.com",
                 keyboardType: "text",
                 controller: _emailController,
                 obscureText: true,

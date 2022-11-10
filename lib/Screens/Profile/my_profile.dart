@@ -90,12 +90,6 @@ class _ProfilePageState extends State<ProfilePage> {
                     ),
                     AppSpaces.verticalSpace10,
                     ProfileTextOption(
-                      label: '$tabSpace Join A Team',
-                      icon: Icons.group_add,
-                      margin: 5.0,
-                    ),
-                    AppSpaces.verticalSpace10,
-                    ProfileTextOption(
                       label: '$tabSpace Share Profile',
                       icon: FeatherIcons.share2,
                       margin: 5.0,

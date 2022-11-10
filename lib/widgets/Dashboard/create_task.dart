@@ -32,7 +32,7 @@ class CreateTaskBottomSheet extends StatelessWidget {
             Row(children: [
               Icon(Icons.contacts, color: Colors.white),
               AppSpaces.horizontalSpace10,
-              Text("Unity Dashboard  ", style: GoogleFonts.lato(color: Colors.white, fontWeight: FontWeight.w700)),
+              Text("App Design  ", style: GoogleFonts.lato(color: Colors.white, fontWeight: FontWeight.w700)),
               Icon(Icons.expand_more, color: Colors.white),
             ]),
             AppSpaces.verticalSpace20,

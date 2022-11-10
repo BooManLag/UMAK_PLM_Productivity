@@ -69,25 +69,12 @@ class EditProfilePage extends StatelessWidget {
                 label: "Your Email"),
             AppSpaces.verticalSpace20,
             LabelledFormInput(
-                placeholder: "HikLHjD@&1?>",
+                placeholder: "123456",
                 keyboardType: "text",
                 controller: _passController,
                 obscureText: true,
                 label: "Your Password"),
             AppSpaces.verticalSpace20,
-            LabelledFormInput(
-                placeholder: "Visual Designer",
-                keyboardType: "text",
-                controller: _roleController,
-                obscureText: true,
-                label: "Role"),
-            AppSpaces.verticalSpace20,
-            LabelledFormInput(
-                placeholder: "Design & Cat Person",
-                keyboardType: "text",
-                controller: _aboutController,
-                obscureText: true,
-                label: "About Me"),
           ]))))
     ]));
   }

@@ -24,7 +24,7 @@ class OnboardingStart extends StatelessWidget {
           top: Utils.screenHeight * 1.25,
           left: Utils.screenWidth * 0.39,
           child: Text(
-            "studybud",
+            "kai-begin",
             style: TextStyle(
                 color: HexColor.fromHex("#5C6898"),
                 fontSize: 22,

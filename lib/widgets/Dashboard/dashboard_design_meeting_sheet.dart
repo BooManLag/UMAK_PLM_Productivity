@@ -4,7 +4,7 @@ import 'package:productivity_app/Values/values.dart';
 import 'package:productivity_app/widgets/BottomSheets/bottom_sheet_holder.dart';
 import 'package:productivity_app/widgets/Dashboard/sheet_goto_calendar.dart';
 import 'package:productivity_app/widgets/Forms/form_input_unlabelled.dart';
-
+import 'package:productivity_app/widgets/Dashboard/dashboard_done_task.dart';
 import '../add_sub_icon.dart';
 
 import 'filled_selectable_container.dart';
@@ -75,6 +75,7 @@ class DashboardDesignMeetingSheet extends StatelessWidget {
               Align(
                 alignment: Alignment.centerRight,
                 child: AddSubIcon(
+                  callback: DoneTask,
                   scale: 0.8,
                   color: AppColors.primaryAccentColor,
                 ),
@@ -83,4 +84,11 @@ class DashboardDesignMeetingSheet extends StatelessWidget {
       ]),
     );
   }
+}void DoneTask() {
+  showAppBottomSheet(
+    DashboardDoneTask(),
+    isScrollControlled: true,
+    popAndShow: true,
+  );
 }
+
